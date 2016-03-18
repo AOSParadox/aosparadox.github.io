@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.png">
+
+    <title>AOSParadox Onyx Build Guide</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/index.html">AOSParadox home</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Falcon<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://forum.xda-developers.com/moto-g/development/caf-aosp-aosparadox-project-1-0-t3135626">XDA thread</a></li>
+                <li><a href="http://download.aosparadox.org/AOSParadox/falcon/">Downloads</a></li>
+                <li><a href="/build_guides/falcon.html">Build guide</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/wikis/falcon.html">Wiki</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Titan<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://forum.xda-developers.com/moto-g-2014/development/caf-aosp-aosparadox-project-1-0-20150705-t3150416">XDA thread</a></li>
+                <li><a href="http://download.aosparadox.org/AOSParadox/titan/">Downloads</a></li>
+                <li><a href="/build_guides/titan.html">Build guide</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/wikis/titan.html">Wiki</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bacon<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://forum.xda-developers.com/oneplus-one/orig-development/caf-aosp-aosparadox-project-1-0-20150906-t3195245">XDA thread</a></li>
+                <li><a href="http://download.aosparadox.org/AOSParadox/bacon/">Downloads</a></li>
+                <li><a href="/build_guides/bacon.html">Build guide</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/wikis/bacon.html">Wiki</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Onyx<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://forum.xda-developers.com/oneplus-x/orig-development/caf-aosp-aosparadox-project-2-1-20160306-t3330128">XDA thread</a></li>
+                <li><a href="http://download.aosparadox.org/AOSParadox/onyx/">Downloads</a></li>
+                <li><a href="#">Build guide</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/wikis/onyx.html">Wiki</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tomato<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://forums.yuplaygod.com/threads/caf-aosp-la-br-1-2-6-01310-8x16-0-6-0-1-stable-aosparadox-project-2-1-20160313.30181/">YU forums thread</a></li>
+                <li><a href="http://download.aosparadox.org/AOSParadox/tomato/">Downloads</a></li>
+                <li><a href="/build_guides/tomato.html">Build guide</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/wikis/tomato.html">Wiki</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lettuce<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://forums.yuplaygod.com/threads/caf-aosp-la-br-1-2-6-01310-8x16-0-6-0-1-stable-aosparadox-project-2-1-20160313.31153/">YU forums thread</a></li>
+                <li><a href="http://download.aosparadox.org/AOSParadox/lettuce/">Downloads</a></li>
+                <li><a href="/build_guides/lettuce.html">Build guide</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/wikis/lettuce.html">Wiki</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jalebi<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://forums.yuplaygod.com/threads/caf-aosp-la-br-1-2-6-01310-8x16-0-6-0-1-stable-aosparadox-project-2-1-20160313.31154/">YU forums thread</a></li>
+                <li><a href="http://download.aosparadox.org/AOSParadox/jalebi/">Downloads</a></li>
+                <li><a href="/build_guides/jalebi.html">Build guide</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/wikis/jalebi.html">Wiki</a></li>
+              </ul>
+            </li>
+            <li><a href="/members.html">Team members</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <center><div class="jumbotron">
+        <h1>AOSParadox onyx build guide</h1>
+      </div></center>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+
