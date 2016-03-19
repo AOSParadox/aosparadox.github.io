@@ -19,7 +19,7 @@
     <link href="/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/theme.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -133,7 +133,43 @@
             <h1>How to build for jalebi</h1>
           </div>
     </div>
+    <div class="page-header">
+	<h2>Setting up the source</h2>
+    </div>
     </center>
+    <div class="instruction">
+	<h3>Step 1: Create a new directory.</h3>
+	<code>
+	   mkdir -p ~/aosparadox/<br>
+	   cd ~/aosparadox/
+	</code>
+	<h3>Step 2: Initialize the CAF repo.</h3>
+	<code>repo init -u git://codeaurora.org/platform/manifest.git -b release -m default_LA.BR.1.2.6-01310-8x16.0.xml</code> 
+	<h3>Step 3: Add our github repositories.</h3>
+	<code>
+	   mkdir -p .repo/local_manifests/<br>
+	   wget -O .repo/local_manifests/yu_par.xml https://raw.githubusercontent.com/AOSParadox/local_aosparadox/yu-par-6.0/yu_par.xml
+	</code>
+	<h3>Step 4: Sync</h3>
+	<code>repo sync -c --no-tags -j[Amount of CPU threads]</code>
+    </div>
+    <br><br>	
+    <center>
+    <div class="page-header">
+	<h2>Building the ROM</h2>
+    </div>
+    </center>
+    <div class="instruction">
+	<h3>Step 5: Build</h3>
+	<code>
+	   . build/envsetup.sh<br>
+	   lunch full_jalebi-user<br>
+	   mv kernel_yu_msm8916_32/ kernel/<br>
+	   rm -rf hardware/libhardware/modules/sensors<br>
+	   make -j[Amount of CPU threads] otapackage
+	</code>
+	<h3>You're done! If no errors occured, the build is available at out/target/product/jalebi/</h3>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
