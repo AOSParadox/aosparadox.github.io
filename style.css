@@ -31,3 +31,11 @@ code {
   margin-left: 10%;
   font: "24px sans-serif";
 }
+
+.navbar {
+  background: #000000;
+}
+
+.navbar .nav > li > a {
+  color: #FFFFFF;
+}
