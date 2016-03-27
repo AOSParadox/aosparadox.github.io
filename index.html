@@ -1,153 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/logo.svg">
+<html>
 
-    <title>AOSParadox Website</title>
+	<head>
+		<title>AOSParadox - The Pure Android Experience</title>		
+		<meta name="theme-color" content="#13171c">
+		<meta content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" name="viewport">
+		<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+		<link href="bower_components/paper-toolbar/paper-toolbar.html" rel="import">
+		<link href="bower_components/neon-animation/neon-animated-pages.html" rel="import">
+        <link href="bower_components/neon-animation/neon-animations.html" rel="import">
+		<link href="bower_components/paper-icon-button/paper-icon-button.html" rel="import">
+		<link href="bower_components/paper-menu/paper-menu.html" rel="import">
+		<link href="bower_components/paper-drawer-panel/paper-drawer-panel.html" rel="import">
+        <link href="bower_components/paper-header-panel/paper-header-panel.html" rel="import">
+        <link href="bower_components/iron-icons/iron-icons.html" rel="import">
+        <link href="bower_components/iron-icons/communication-icons.html" rel="import">
+        <link href="bower_components/iron-icons/av-icons.html" rel="import">
+		<link href="bower_components/paper-item/paper-item.html" rel="import">
+		<link href="bower_components/paper-ripple/paper-ripple.html" rel="import">
+        <link href="bower_components/paper-button/paper-button.html" rel="import">
+        <link href="pages/aosparadox-landing-home.html" rel="import">
+        <link href="css/custom-styles.css" rel="import">
+		<link href="css/style.css" rel="stylesheet">
+        <script src="bower_components/particles.js/particles.js"></script>
+	</head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap theme -->
-    <link href="/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	
 
-    <!-- Custom styles for this template -->
-    <link href="/style.css" rel="stylesheet">
+	<body>
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+        <template is="dom-bind" id="aosparadoxLanding">
+    		
+            <div id="particles-js" class="container">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+    			<paper-drawer-panel class="aosparadox-landing-drawer" force-narrow disable-swipe>
+                    <paper-header-panel drawer>
+                        <paper-menu attr-for-selected="data-route" selected="{{aosparadoxRoute}}" on-iron-select="closeDrawer" selected-class="menu-item-selected">    
+                            
+                            <paper-item data-route="landingHome">
+                                <span>Home</span>
+                                <paper-ripple></paper-ripple>
+                            </paper-item>
 
-  <body>
-    <!-- Fixed navbar-->
-    <div class="navbar navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" style="color:#FFFFFF;" href="#">AOSParadox home</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Falcon<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="http://forum.xda-developers.com/moto-g/development/caf-aosp-aosparadox-project-1-0-t3135626">XDA thread</a></li>
-		<li><a href="http://download.aosparadox.org/AOSParadox/falcon/">Downloads</a></li>
-		<li><a href="/build_guides/falcon.html">Build guide</a></li>
-		<li role="separator" class="divider"></li>
-		<li><a href="/wikis/falcon.html">Wiki</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Titan<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="http://forum.xda-developers.com/moto-g-2014/development/caf-aosp-aosparadox-project-1-0-20150705-t3150416">XDA thread</a></li>
-		<li><a href="http://download.aosparadox.org/AOSParadox/titan/">Downloads</a></li>
-		<li><a href="/build_guides/titan.html">Build guide</a></li>
-		<li role="separator" class="divider"></li>
-		<li><a href="/wikis/titan.html">Wiki</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bacon<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="http://forum.xda-developers.com/oneplus-one/orig-development/caf-aosp-aosparadox-project-1-0-20150906-t3195245">XDA thread</a></li>
-		<li><a href="http://download.aosparadox.org/AOSParadox/bacon/">Downloads</a></li>
-		<li><a href="/build_guides/bacon.html">Build guide</a></li>
-		<li role="separator" class="divider"></li>
-		<li><a href="/wikis/bacon.html">Wiki</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Onyx<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="http://forum.xda-developers.com/oneplus-x/orig-development/caf-aosp-aosparadox-project-2-1-20160306-t3330128">XDA thread</a></li>
-		<li><a href="http://download.aosparadox.org/AOSParadox/onyx/">Downloads</a></li>
-		<li><a href="/build_guides/onyx.html">Build guide</a></li>
-		<li role="separator" class="divider"></li>
-		<li><a href="/wikis/onyx.html">Wiki</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tomato<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="http://forums.yuplaygod.com/threads/caf-aosp-la-br-1-2-6-01310-8x16-0-6-0-1-stable-aosparadox-project-2-1-20160313.30181/">YU forums thread</a></li>
-		<li><a href="http://download.aosparadox.org/AOSParadox/tomato/">Downloads</a></li>
-		<li><a href="/build_guides/tomato.html">Build guide</a></li>
-		<li role="separator" class="divider"></li>
-		<li><a href="/wikis/tomato.html">Wiki</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lettuce<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="http://forums.yuplaygod.com/threads/caf-aosp-la-br-1-2-6-01310-8x16-0-6-0-1-stable-aosparadox-project-2-1-20160313.31153/">YU forums thread</a></li>
-		<li><a href="http://download.aosparadox.org/AOSParadox/lettuce/">Downloads</a></li>
-		<li><a href="/build_guides/lettuce.html">Build guide</a></li>
-		<li role="separator" class="divider"></li>
-		<li><a href="/wikis/lettuce.html">Wiki</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jalebi<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="http://forums.yuplaygod.com/threads/caf-aosp-la-br-1-2-6-01310-8x16-0-6-0-1-stable-aosparadox-project-2-1-20160313.31154/">YU forums thread</a></li>
-		<li><a href="http://download.aosparadox.org/AOSParadox/jalebi/">Downloads</a></li>
-		<li><a href="/build_guides/jalebi.html">Build guide</a></li>
-		<li role="separator" class="divider"></li>
-		<li><a href="/wikis/jalebi.html">Wiki</a></li>
-              </ul>
-            </li>
-            <li><a href="/members.html">Team members</a></li>
-            <li><a href="/about.html">About</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-      </div>
-    <center>
-    <div class="container theme-showcase" role="main">
-        <img src="/logo.svg" style="float:left" height="195" width="195"/>
-	<div id="welcome" class="jumbotron"> 
-           <h1>Welcome to AOSParadox</h1>
-	</div>
-        <div class="page-header">
-           <h2>Our official links:</h2>
-        </div>
-        <p>
-           <a href="https://github.com/AOSParadox"> <button type="button" class="btn btn-primary">Github</button></a>
-           <a href="http://download.aosparadox.org/AOSParadox/"> <button type="button" class="btn btn-success">Our file server</button></a>
-           <a href="https://plus.google.com/communities/110645978000145102457"> <button type="button" class="btn btn-danger">Google+</button></a>
-        </p>
-    </div> <!-- /container -->
-    </center>
+                            <paper-item data-route="landingDevices">
+                                <span>Devices</span>
+                                <paper-ripple></paper-ripple>
+                            </paper-item>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="/dist/js/bootstrap.min.js"></script>
-    <script src="/assets/js/docs.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
+                            <paper-item data-route="landingTeam">
+                                <span>Team</span>
+                                <paper-ripple></paper-ripple>
+                            </paper-item>
+
+                            <paper-item data-route="landingAbout">
+                                <span>About</span>
+                                <paper-ripple></paper-ripple>
+                            </paper-item>
+
+                        </paper-menu>
+                    </paper-header-panel>
+
+                    <paper-header-panel main>
+                        <paper-toolbar>
+                            <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                            <img class="aosparadox-logo" src="images/aosparadox_logo.png">
+                            <div class="spacer"></div>
+                            <paper-menu class="toolbar-links-container" attr-for-selected="data-route" selected="{{aosparadoxRoute}}" on-iron-select="closeDrawer" selected-class="menu-item-selected">    
+                                
+                                <paper-item class="toolbar-links-item" data-route="landingHome">
+                                    <span>Home</span>
+                                    <paper-ripple></paper-ripple>
+                                </paper-item>
+
+                                <paper-item class="toolbar-links-item" data-route="landingDevices">
+                                    <span>Devices</span>
+                                    <paper-ripple></paper-ripple>
+                                </paper-item>
+
+                                <paper-item class="toolbar-links-item" data-route="landingTeam">
+                                    <span>Team</span>
+                                    <paper-ripple></paper-ripple>
+                                </paper-item>
+
+                                <paper-item class="toolbar-links-item" data-route="landingAbout">
+                                    <span>About</span>
+                                    <paper-ripple></paper-ripple>
+                                </paper-item>
+
+                            </paper-menu>
+                        </paper-toolbar>
+                        <neon-animated-pages selected="{{aosparadoxRoute}}" entry-animation="fade-in-animation" exit-animation="fade-out-animation" attr-for-selected="data-route" class="content fit">
+                            
+                            <!-- HOME -->
+                            <neon-animatable data-route="landingHome">
+                                <aosparadox-landing-home></aosparadox-landing-home>
+                            </neon-animatable>
+
+                        </neon-animated-pages> 
+                    </paper-header-panel>
+                
+                </paper-drawer-panel>
+
+
+    		</div>
+
+
+
+            <!-- SCRIPTS -->
+
+            <script>
+            
+                document.addEventListener('WebComponentsReady', function () 
+                {
+                    document.querySelector('#aosparadoxLanding').aosparadoxRoute = 'landingHome';
+                    particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() 
+                    {
+                        console.log('callback - particles.js config loaded');
+                    });
+                });
+
+                aosparadoxLanding.closeDrawer = function()
+                {
+                    document.querySelector('paper-drawer-panel').closeDrawer();
+                }
+
+            </script>
+
+
+
+        </template>
+
+	</body>
+
+</html>																																																																																																																																																																																																																																																										

@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'sk-modernistbold';
+    src: url('../fonts/sk-modernist-bold-webfont.eot');
+    src: url('../fonts/sk-modernist-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sk-modernist-bold-webfont.woff2') format('woff2'),
+         url('../fonts/sk-modernist-bold-webfont.woff') format('woff'),
+         url('../fonts/sk-modernist-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sk-modernistregular';
+    src: url('../fonts/sk-modernist-regular-webfont.eot');
+    src: url('../fonts/sk-modernist-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sk-modernist-regular-webfont.woff2') format('woff2'),
+         url('../fonts/sk-modernist-regular-webfont.woff') format('woff'),
+         url('../fonts/sk-modernist-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'geometosregular';
+    src: url('../fonts/geometos-webfont.eot');
+    src: url('../fonts/geometos-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/geometos-webfont.woff2') format('woff2'),
+         url('../fonts/geometos-webfont.woff') format('woff'),
+         url('../fonts/geometos-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*
+{
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+html, body
+{
+    font-family: 'sk-modernistregular', sans-serif;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+    background-color: #000000;
+}
+
+.title-span
+{
+    font-family: 'geometosregular', sans-serif;
+}
+
+span
+{
+    pointer-events: none;
+}
+
+.container
+{
+	height: 100%;
+	width: 100%;
+}
+
+.aosparadox-logo
+{
+    width: auto;
+    height: 40%;
+}
+
+.toolbar-links-item
+{
+    text-transform: uppercase;
+    font-weight: 500 !important;
+    margin: 0px !important;
+    padding: 0 8px !important;
+    font-size: 0.9em !important;
+    display: inline-block !important;
+    height: 48px !important;
+    line-height: 48px !important;
+    position: relative;
+}
+
+paper-menu paper-item
+{
+    position: relative;
+}
+
+.toolbar-links-item span
+{
+    font-family: 'sk-modernistregular', sans-serif;
+}
+
+.menu-item-selected span
+{
+    font-family: 'sk-modernistbold', sans-serif;
+    color: #1bffac;
+}
+
+
+
+paper-toolbar paper-icon-button
+{
+    display: none;
+}
+
+neon-animated-pages
+{
+    height: 100%;
+}
+
+
+/* MEDIA QUERYS */
+
+@media (min-width: 800px) and (max-width: 1100px) 
+{
+	
+	
+}
+
+
+@media (max-width: 800px) 
+{
+	.toolbar-links-container
+    {
+        display: none;
+    }
+
+    paper-toolbar paper-icon-button
+    {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) 
+{
+	
+}
+
+
+
+::-webkit-scrollbar 
+{
+	width: 2px;
+	height: 2px;
+}
+::-webkit-scrollbar-button 
+{
+	width: 0px;
+	height: 0px;
+}
+::-webkit-scrollbar-thumb 
+{
+	background: #626262;
+	border: 0px none #ffffff;
+	border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover 
+{
+	background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active 
+{
+background: #000000;
+}
+::-webkit-scrollbar-track 
+{
+background: #292929;
+border: 0px none #ffffff;
+border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover 
+{
+background: #666666;
+}
+::-webkit-scrollbar-track:active 
+{
+background: #333333;
+}
+::-webkit-scrollbar-corner 
+{
+background: transparent;
+}													
+
+
+
+
+/* ----------------------------- */
+
+
+
+.group-elements, .group-labels
+{
+    padding: 0px;    
+    display: none;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease; 
+    -transition: all 0.3s ease;
+}   
+
+.make-group-invisible
+{
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.make-group-visible
+{
+    display: block !important;
+    opacity: 1 !important;
+}

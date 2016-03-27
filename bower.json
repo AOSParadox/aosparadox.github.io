@@ -1,0 +1,26 @@
+{
+  "name": "fezahapp",
+  "version": "0.0.0",
+  "authors": [
+    "Faiz Malkani <malkanifaiz@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#1.2.0",
+    "paper-dialog": "PolymerElements/paper-dialog#~1.0.2",
+    "paper-radio-button": "PolymerElements/paper-radio-button#~1.0.11",
+    "paper-radio-group": "PolymerElements/paper-radio-group#~1.0.6",
+    "paper-checkbox": "PolymerElements/paper-checkbox#~1.0.14",
+    "paper-dialog-scrollable": "PolymerElements/paper-dialog-scrollable#~1.0.1",
+    "paper-slider": "PolymerElements/paper-slider#~1.0.7",
+    "iron-swipeable-pages": "~1.0.3",
+    "particles.js": "~2.0.0"
+  }
+}

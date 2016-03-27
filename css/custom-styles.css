@@ -1,0 +1,53 @@
+<style is="custom-style">
+
+    .aosparadox-landing-drawer
+    {
+        --paper-drawer-panel-left-drawer-container: 
+        {
+            background-color: #000000;
+        };
+    }
+
+    paper-toolbar
+    {
+        --paper-toolbar-background: transparent;
+    }
+
+    paper-menu
+    {
+        --paper-menu-background-color: #transparent;
+        --paper-menu-color: white;
+        --paper-menu-focused-item:
+        {
+            background-color: #181d23;
+        };
+        --paper-menu-focused-item-after:
+        {
+            background-color: #181d23;
+        };
+    }
+
+    paper-item
+    {
+        --paper-item-focused-before:
+        {
+            background-color: #181d23;
+        };
+    }
+
+    .spacer
+    {
+        @apply(--layout-flex);
+    }
+
+    @media (max-width: 800px) 
+    {
+        
+    }
+
+    @media (max-width: 480px) 
+    {
+        
+    }
+
+</style>
