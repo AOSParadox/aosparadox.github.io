@@ -61,7 +61,10 @@ html, body
 	margin: 0;
 	height: 100%;
 	width: 100%;
-    background-color: #000000;
+    background-color: black;
+    color: white;
+    line-height: 1.5;
+    overflow: hidden;
 }
 
 .title-span
@@ -102,6 +105,7 @@ span
 paper-menu paper-item
 {
     position: relative;
+    font-family: 'sk-modernistregular', sans-serif !important;
 }
 
 .toolbar-links-item span
@@ -127,17 +131,56 @@ neon-animated-pages
     height: 100%;
 }
 
+.toolbar-title
+{
+    font-size: 1.2em;
+    font-family: 'sk-modernistbold';
+    display: none;
+}
+
+
+.content-card
+{
+    width:60%;
+    background: white;
+    color: #212121;
+    padding: 48px;
+    margin: 96px 0;
+    box-sizing: border-box;
+}
+
+
 
 /* MEDIA QUERYS */
 
 @media (min-width: 800px) and (max-width: 1100px) 
 {
-	
-	
+	.content-card
+    {
+        width: 70%;
+        background: white;
+        color: #212121;
+        padding: 48px;
+        margin: 96px 0;
+        box-sizing: border-box;
+    }
 }
 
 
-@media (max-width: 800px) 
+@media (max-width: 768px) 
+{
+    .content-card
+    {
+        width: 80%;
+        background: white;
+        color: #212121;
+        padding: 48px;
+        margin: 48px 0;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 425px) 
 {
 	.toolbar-links-container
     {
@@ -148,11 +191,26 @@ neon-animated-pages
     {
         display: block;
     }
-}
 
-@media (max-width: 480px) 
-{
-	
+    .aosparadox-logo
+    {
+        margin-right: 24px;
+    }
+
+    .toolbar-title
+    {
+        display: inline-block;
+    }
+
+    .content-card
+    {
+        width: 95%;
+        background: white;
+        color: #212121;
+        padding: 16px;
+        margin: 24px 0 48px 0;
+        box-sizing: border-box;
+    }
 }
 
 

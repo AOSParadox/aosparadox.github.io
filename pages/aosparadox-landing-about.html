@@ -1,0 +1,79 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="aosparadox-landing-about">
+
+    <template>
+
+        <style>
+
+            :host
+            {
+                padding: 0px;
+                height: 100%;
+                display: block;
+            }
+
+            .home-page-container
+            {
+                width: 100%;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .rom-logo
+            {
+                margin: 0 auto;
+                display: block;
+                width: 72px;
+                height: auto;
+            }
+
+            .about-rom
+            {
+                margin-top: 72px;
+                display: block;
+            }
+
+
+        </style>
+
+        <div class="home-page-container">
+            
+            <div class="content-card">
+
+                <img class="rom-logo" src="../images/aosparadox_logo_black.png">
+
+                <span class="about-rom">AOSParadox is an Android ROM based on the CAF (Code Aurora Forum) sources, a fork of the Android Open Source Project that contains additional enhancements for Qualcomm chipsets, thus bringing better performance, stability and battery life. The goal of the project is to bring to each of the supported devices the most stable and clean AOSP-like experience.
+                The project was born in November 2014 as a Moto G 2013 (falcon) only ROM and has gone through various stages until the first release in June 2015, continuing by later adding support for various other devices like the Moto G 2014 (titan), OnePlus One (bacon) and others.</span>
+
+            </div>
+
+        </div>            
+            
+    </template>
+
+
+
+
+    <script>
+        Polymer
+        ({
+            is: 'aosparadox-landing-about',
+            ready: function() 
+            {
+                
+            }
+
+        });
+    </script>
+
+
+
+</dom-module>
+
+
+
+

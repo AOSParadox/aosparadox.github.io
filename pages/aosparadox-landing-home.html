@@ -78,6 +78,8 @@
             {
                 margin: 0 16px;
                 color: #1bffac;
+                width: 2.3em;
+                height: 2.3em;
             }
 
             paper-button
@@ -88,7 +90,7 @@
                 font-weight: 700;
             }
 
-            @media (max-width: 800px)
+            @media (max-width: 768px)
             {
                 .homepage-title
                 {
@@ -96,8 +98,13 @@
                 }
             }
 
-            @media (max-width: 480px) 
+            @media (max-width: 425px) 
             {
+                .home-page-container .labels-container
+                {
+                    max-width: 90%;
+                }
+
                 .homepage-title
                 {
                     font-size: 2.7em;
@@ -106,6 +113,7 @@
                 .homepage-subtitle
                 {
                     font-size: 1em;
+                    margin-top: 0px;
                 }
 
                 .homepage-subtitle span
@@ -125,7 +133,7 @@
                     <div class="subtitle-icons">
                         <paper-icon-button src="../images/github.svg"></paper-icon-button>
                         <paper-icon-button icon="dns"></paper-icon-button>
-                        <paper-icon-button src="../images/googleplus.svg"></paper-icon-button>
+                        <paper-icon-button style="width: 2.7em; height: 2.7em" src="../images/googleplus.svg"></paper-icon-button>
                     </div>
                 </div>
                 <!-- <paper-button raised>Learn More</paper-button> -->

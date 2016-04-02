@@ -1,0 +1,164 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="aosparadox-landing-team">
+
+    <template>
+
+        <style>
+
+            :host
+            {
+                padding: 0px;
+                height: 100%;
+                display: block;
+            }
+
+            .home-page-container
+            {
+                width: 100%;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .team-items-container
+            {
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                flex-direction: row;
+                -webkit-flex-direction: row;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+
+            .team-item
+            {
+                width: 100%;
+                padding: 16px;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .team-item img
+            {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                margin-right: 48px; 
+            }
+
+            .team-item-name
+            {
+                font-family: 'sk-modernistbold', sans-serif;
+            }
+
+            .team-item-bio
+            {
+                font-family: 'sk-modernistregular', sans-serif;
+            }
+
+            @media (max-width: 768px)
+            {
+                
+            }
+
+            @media (max-width: 425px) 
+            {
+                .team-item
+                {
+                    padding: 16px 0;
+                    align-items: flex-start;
+                }
+
+                .team-item img
+                {
+                    width: 56px;
+                    height: 56px;
+                    margin-right: 48px; 
+                }
+            }
+
+
+        </style>
+
+        <div class="home-page-container">
+            
+        <div class="content-card">
+
+            <div class="team-items-container">
+                
+                <template id="teamMembersTemplate" is="dom-repeat" items="{{teamMembersArray}}">
+                    <div class="team-item">
+                        <img src="http://placehold.it/350x150">
+                        <span class="team-item-name">{{item.name}}<br><span class="team-item-bio">{{item.bio}}</span></span>
+                    </div>
+                </template>
+
+
+            </div>
+
+        </div>
+
+        </div>            
+            
+    </template>
+
+
+
+
+    <script>
+        Polymer
+        ({
+            is: 'aosparadox-landing-team',
+            ready: function() 
+            {
+                
+            },
+
+            properties:
+            {
+                teamMembersArray:
+                {
+                    type: Array,
+                    value:
+                    [
+                        {
+                            index: 0, name: 'Louis (h2064)', bio: 'Main developer, founder and leader of the project. Loves coding.'
+                        },
+
+                        {
+                            index: 1, name: 'Rutash (Quasar)', bio: 'Founder. Loves pizza and all things photography'
+                        },
+
+                        {
+                            index: 2, name: 'Yordi (TheQuiche)', bio: 'OnePlus One (Bacon) ROM contributor and tester. Loves bikes.'
+                        },
+
+                        {
+                            index: 3, name: 'Lionel (loveboy_lion)', bio: 'OnePlus X (Onyx) ROM tester/contributor and YU Ambassador. Loves sailing.'
+                        },
+
+                        {
+                            index: 4, name: 'Eduard  (edisile)', bio: ' Person in charge of graphics and design, founder. Loves music.'
+                        }
+                    ]
+
+                }
+            }
+
+        });
+    </script>
+
+
+
+</dom-module>
+
+
+
+

@@ -20,9 +20,13 @@
 		<link href="bower_components/paper-ripple/paper-ripple.html" rel="import">
         <link href="bower_components/paper-button/paper-button.html" rel="import">
         <link href="pages/aosparadox-landing-home.html" rel="import">
+        <link href="pages/aosparadox-landing-team.html" rel="import">
+        <link href="pages/aosparadox-landing-devices.html" rel="import">
+        <link href="pages/aosparadox-landing-about.html" rel="import">
         <link href="css/custom-styles.css" rel="import">
 		<link href="css/style.css" rel="stylesheet">
         <script src="bower_components/particles.js/particles.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	</head>
 
 	
@@ -64,6 +68,7 @@
                         <paper-toolbar>
                             <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
                             <img class="aosparadox-logo" src="images/aosparadox_logo.png">
+                            <span class="toolbar-title">Home</span>
                             <div class="spacer"></div>
                             <paper-menu class="toolbar-links-container" attr-for-selected="data-route" selected="{{aosparadoxRoute}}" on-iron-select="closeDrawer" selected-class="menu-item-selected">    
                                 
@@ -96,6 +101,21 @@
                                 <aosparadox-landing-home></aosparadox-landing-home>
                             </neon-animatable>
 
+                            <!-- DEVICES -->
+                            <neon-animatable data-route="landingDevices">
+                                <aosparadox-landing-devices></aosparadox-landing-devices>
+                            </neon-animatable>
+
+                            <!-- TEAM -->
+                            <neon-animatable data-route="landingTeam">
+                                <aosparadox-landing-team></aosparadox-landing-team>
+                            </neon-animatable>
+
+                            <!-- ABOUT -->
+                            <neon-animatable data-route="landingAbout">
+                                <aosparadox-landing-about></aosparadox-landing-about>
+                            </neon-animatable>
+
                         </neon-animated-pages> 
                     </paper-header-panel>
                 
@@ -121,11 +141,32 @@
 
                 aosparadoxLanding.closeDrawer = function()
                 {
+                    var aospParadoxSelected = document.querySelector('#aosparadoxLanding').aosparadoxRoute;
+                    var toolbarTitle = document.querySelector('.toolbar-title');
+                    console.log(aospParadoxSelected);
+                    if(aospParadoxSelected = 'landingHome')
+                    {
+                        toolbarTitle.innerHTML = 'Home';
+                        console.log(toolbarTitle.innerHTML);
+                    }
+                    else if(aospParadoxSelected = 'landingDevices')
+                    {
+                        toolbarTitle.innerHTML = 'Devices';
+                    }
+                    else if(aospParadoxSelected = 'landingTeam')
+                    {
+                        toolbarTitle.innerHTML = '';
+                        toolbarTitle.innerHTML = 'Team';
+                        console.log(toolbarTitle.innerHTML);
+                    }
+                    else if(aospParadoxSelected = 'landingAbout')
+                    {
+                        toolbarTitle.innerHTML = 'About';
+                    }
                     document.querySelector('paper-drawer-panel').closeDrawer();
                 }
 
             </script>
-
 
 
         </template>
