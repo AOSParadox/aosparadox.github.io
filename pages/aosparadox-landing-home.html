@@ -131,9 +131,9 @@
                 <div class="homepage-subtitle">
                     <span>The Pure Android Experience</span>
                     <div class="subtitle-icons">
-                        <paper-icon-button src="../images/github.svg"></paper-icon-button>
-                        <paper-icon-button icon="dns"></paper-icon-button>
-                        <paper-icon-button style="width: 2.7em; height: 2.7em" src="../images/googleplus.svg"></paper-icon-button>
+                        <paper-icon-button src="../images/github.svg" on-click="openHomeGithub"></paper-icon-button>
+                        <paper-icon-button icon="dns" on-click="openHomeFileserver"></paper-icon-button>
+                        <paper-icon-button style="width: 2.7em; height: 2.7em" src="../images/googleplus.svg" on-click="openHomeGplus"></paper-icon-button>
                     </div>
                 </div>
                 <!-- <paper-button raised>Learn More</paper-button> -->
@@ -151,8 +151,23 @@
             is: 'aosparadox-landing-home',
             ready: function() 
             {
-                
+
             },
+
+            openHomeGithub: function(e)
+            {
+                window.open('https://github.com/AOSParadox','_blank');
+            },
+
+            openHomeFileserver: function(e)
+            {
+                window.open('http://download.aosparadox.org/AOSParadox/','_blank');
+            },
+
+            openHomeGplus: function(e)
+            {
+                window.open('https://plus.google.com/communities/110645978000145102457','_blank');
+            }
 
         });
     </script>
